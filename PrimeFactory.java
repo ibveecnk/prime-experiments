@@ -21,7 +21,9 @@ public class PrimeFactory {
     }
 
     private boolean isPrime(int candidate) {
-        for (int divisor = 2; divisor <= Math.sqrt(candidate); divisor++) {
+        double sqrt = Math.sqrt(candidate);
+
+        for (int divisor = 2; divisor <= sqrt; divisor++) {
             if (candidate % divisor == 0) {
                 return false;
             }
